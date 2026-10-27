@@ -1,0 +1,5 @@
+{
+  "entry": ["scripts/build.mjs", "tests/*.test.mjs", "public/style.css"],
+  "ignoreDependencies": ["@fontsource/bebas-neue", "@fontsource/dm-sans"],
+  "health": { "coverage": "coverage/coverage-final.json" }
+}

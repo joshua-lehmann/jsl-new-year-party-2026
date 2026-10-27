@@ -1,0 +1,26 @@
+{
+  "name": "jsl-new-year-party-2026",
+  "version": "1.0.0",
+  "description": "JSL Events New Year Party 2026/27 static website",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "c8 --reporter=text --reporter=json node --test tests/*.test.mjs",
+    "dev": "npm run build && python3 -m http.server 4173 --directory dist",
+    "agent-check": "npm test && npm run build && prettier --check . && fallow --fail-on-issues --format json --quiet",
+    "format": "prettier --write ."
+  },
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@fontsource/bebas-neue": "^5.3.0",
+    "@fontsource/dm-sans": "^5.3.0",
+    "c8": "^12.0.0",
+    "fallow": "^3.37.0",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}
